@@ -1,0 +1,22 @@
+.env
+.env_prod
+.env_prod*
+.env_dev
+.env_dev*
+*.log
+
+*/__pycache__
+*.pyc
+__pycache__
+
+wheels/
+venv/
+
+# data files
+
+# vim
+.vim/
+.vscode/
+
+/logs/*
+!/logs/.keep
