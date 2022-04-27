@@ -3,7 +3,7 @@ services:
     postgis:
         image: postgis/postgis:14-master
         volumes:
-            - ./postgis_data:/data/db
+            - postgis_data:/data/db
         ports:
             # shifted one port to avoid conflict with other local Postgres
             - "5431:5432"
@@ -11,3 +11,6 @@ services:
         #     - "5432"
         environment:
             - POSTGRES_PASSWORD=${POSTGRES_PASS}
+
+volumes:
+  postgis_data:
