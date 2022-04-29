@@ -2,7 +2,10 @@
 
 This is an FastAPI tile server utilizing the amazing [TiMVT](https://github.com/developmentseed/timvt) library.
 
-Initially this is just their "Minimal Application" example but with CORS enabled, and it also includes a compose file for launching the latest default version of PostGIS.
+Initially this is just their "Minimal Application" example but with CORS enabled, and it also includes a compose file for launching the latest default version of PostGIS. See [here](https://pithological.com/building-a-district-tile-server/) for more detail.
+
+![District Tiler](https://pithological.com/content/images/2022/04/dynamic_tiling_network_panel-1.gif)
+![District Tiler with Base Map](https://pithological.com/content/images/2022/04/map_with_base_layer.gif)
 
 ## Getting Started
 
