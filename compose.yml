@@ -4,9 +4,10 @@ services:
         image: postgis/postgis:14-master
         volumes:
             - postgis_data:/data/db
-        ports:
+        # ports:
             # shifted one port to avoid conflict with other local Postgres
-            - "5431:5432"
+            # ENABLE when loading data
+            # - "5431:5432"
         expose:
            - "5432"
         networks:
