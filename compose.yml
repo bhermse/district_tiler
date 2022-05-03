@@ -7,10 +7,32 @@ services:
         ports:
             # shifted one port to avoid conflict with other local Postgres
             - "5431:5432"
-        # expose:
-        #     - "5432"
+        expose:
+           - "5432"
+        networks:
+            - tile-network
         environment:
             - POSTGRES_PASSWORD=${POSTGRES_PASS}
 
+    tile-server:
+        image: python:3.9
+        working_dir: /app
+        volumes:
+            - .:/app
+        ports:
+            - "8000:8000"
+        networks:
+            - tile-network
+        command: bash -c "pip install -r /app/requirements.txt && uvicorn main:app --proxy-headers --host 0.0.0.0 --port 8000"
+        environment:
+            POSTGRES_USER: ${POSTGRES_USER}
+            POSTGRES_PASS: ${POSTGRES_PASS}
+            POSTGRES_DBNAME: ${POSTGRES_DBNAME}
+            POSTGRES_HOST: postgis
+            POSTGRES_PORT: ${POSTGRES_PORT}
+    
 volumes:
   postgis_data:
+
+networks:
+  tile-network: null
