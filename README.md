@@ -6,7 +6,7 @@ Initially this is just their "Minimal Application" example but with CORS enabled
 
 ![District Tiler](https://pithological.com/content/images/2022/04/dynamic_tiling_network_panel-1.gif)
 ![District Tiler with Base Map](https://pithological.com/content/images/2022/04/map_with_base_layer.gif)
-![Live Example](https://district-map.bhermsen.info/)
+[Live Example](https://district-map.bhermsen.info/)
 
 ## Getting Started
 
